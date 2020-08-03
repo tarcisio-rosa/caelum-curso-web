@@ -101,6 +101,6 @@ header {
     padding-bottom: 10px;
 }
 
-.banner-destaque {
-    width: auto;
+.banner-destaque img {
+    width: 650px;
 }
