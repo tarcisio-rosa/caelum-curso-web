@@ -258,3 +258,25 @@ footer .container {
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
 }
+
+.painel li:hover figure {
+    
+    /* Efeito de sombra branca atrás das imagens junto as descrições, posição correta ao passar o mouse e rotação da imagem */
+
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 5px #333;
+    transition: 0.7s ease-in;
+    transform: scale(1.2) rotate(-5deg);
+    position: relative;
+}
+
+.painel li:nth-child(2n):hover {
+    
+    /* transição para os elemntos pares, rotação ao contrário */
+
+    transform: scale(1.2) rotate(10deg);
+}
+
+.painel li {
+    transition: 0.7s ease-out;
+}
