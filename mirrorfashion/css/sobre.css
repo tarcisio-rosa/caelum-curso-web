@@ -69,3 +69,25 @@ h1 + p {
 p::first-line {
     font-variant: small-caps;
 }
+
+@media (max-width: 939px) {
+
+    body {
+        max-width: 96%;
+    }
+
+    img {
+        max-width: 80%;
+    }
+
+    figure {
+        max-width: 70%;
+    }
+
+    @media (max-width: 480px) {
+
+        #familia-pelho {
+            float: none;
+        }
+    }
+}
