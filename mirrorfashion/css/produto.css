@@ -114,3 +114,90 @@ label[for=azul]::after {
     margin: 1em 0;
     cursor: pointer;
 }
+
+@media (min-width: 630px) {
+
+    .produto {
+        /* a foto vai se posicionar absolutamente com relação a esse elemento, por isso preciso estar posicionado */
+
+        position: relative;
+
+        /* deixar 40% de espaço em branco na esquerda para foto ocupar */
+
+        padding-left: 40%;
+
+        /*aumentando o tamanho da fontes usadas no produto, já que estamos escalando proporcionalmente*/
+        font-size: 1.2em;
+    }
+
+    .cores {
+        /* estava relative antes; reinicio para static para evitar que a foto se posicione com relação a mim */
+        position: static;
+
+        /* zerando o padding-top que tinha antes e não preciso mais */
+        padding: 0px;
+
+        /*tirando a borda do conjunto*/
+        border: none;
+    }
+
+    .cores legend {
+        /* estava absolute antes, para ter o mesmo comportmaneto no Chrome e no Firefox;
+        agora podemos voltar ao fluxo da página */
+        position: static;
+    }
+
+    .cores label img {
+        /* imagem se posiciona absolutamente à esquerda com relação ao .produto */
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        /* para evitar que a imagem vaze para fora do espaço que foi determinado */
+        max-width: 35%;
+        max-height: 100%;
+    }
+
+    .cores label::after {
+        /* as bolinhas coloridas tinham posição absoluta e não precisamos mais, basta flutuar uma do lado da outra */
+
+        position: static;
+        float: left;
+
+        /*margem entre as bolinhas coloridas*/
+
+        margin-right: 10px;
+    }
+    fieldset {
+        display: inline-block;
+        vertical-align: top;
+
+        margin: 1em o;
+        min-width: 240px;
+        width: 45%;
+        border: none;
+    }
+
+}
+
+.detalhes {
+    padding: 2em 0;
+}
+
+.detalhes h2 {
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.detalhes p {
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 36em;
+}
+
+@media (min-width: 500px) {
+    .detalhes {
+        font-size: 1.2em;
+    }
+}
